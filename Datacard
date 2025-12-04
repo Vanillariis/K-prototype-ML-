@@ -1,0 +1,122 @@
+============================================================
+SYNTHETIC STRESS–DIALOGUE INTERACTION DATASET
+============================================================
+
+DATASET SUMMARY
+------------------------------------------------------------
+This dataset is a synthetic multimodal dataset designed to
+mirror the structure of participant data from an interactive
+10-minute game session. Around 30 participants are simulated.
+The dataset is used for developing and validating clustering
+pipelines (e.g., K-Prototypes) that combine physiological,
+behavioral, and self-report features.
+
+------------------------------------------------------------
+DATASET STRUCTURE
+------------------------------------------------------------
+Physiological: Electrodermal Activity (EDA)
+
+Behavioral / Categorical: Stress labels, dialogue decisions, tendency based on stress and dialoug options. 
+
+Self-report / Continuous: valence, arousal, agency, identification, immersion, system usability
+
+
+------------------------------------------------------------
+SYNTHETIC DATA GENERATION
+------------------------------------------------------------
+The dataset is fully synthetic and created to:
+• mimic the size and structure of the real target dataset
+• approximate realistic statistical patterns
+• allow testing of preprocessing and clustering workflows
+
+No real participant data is included!
+
+------------------------------------------------------------
+DATASET FEATURES
+------------------------------------------------------------
+
+Categorical Features:
+• Stressed–Honest
+• Stressed–Defensive
+• Stressed–Mixed
+• Non-stressed–Honest
+• Non-stressed–Defensive
+• Non-stressed–Mixed
+• Mixed–Honest
+• Mixed–Defensive
+• Mixed–Mixed
+
+These combine:
+• Stress pattern across narrative points
+• Dialogue tendencies (honest/defensive/mixed)
+
+Continuous Features:
+Physiological - EDA 
+Self-report(Likert 1–7) - 
+• valence
+• arousal
+• agency
+• identification
+• immersion
+• system questions
+
+
+
+------------------------------------------------------------
+PREPROCESSING
+------------------------------------------------------------
+• Inspected for missing values
+
+• Removed irrelevant variables:
+  - Participant ID
+  - Detailed state logs
+  - Detailed choice logs
+
+• Separated categorical and numerical features
+
+• Scaled all numerical variables using min–max normalization
+
+• Used:
+  - Euclidean distance for numerical features
+  - Hamming distance for categorical features
+
+
+------------------------------------------------------------
+INTENDED USE
+------------------------------------------------------------
+Intended for:
+• developing and validating mixed-feature clustering pipelines
+• testing preprocessing workflows
+
+
+------------------------------------------------------------
+LIMITATIONS
+------------------------------------------------------------
+• Fully synthetic data; not reflective of real human patterns
+• Relationships are approximate, not empirically validated
+• Results will not generalize to real users
+
+
+------------------------------------------------------------
+ETHICAL CONSIDERATIONS
+------------------------------------------------------------
+• No personal or identifiable information
+• No real participant involvement
+• Safe for open sharing and unrestricted development use
+
+
+------------------------------------------------------------
+LICENSING
+------------------------------------------------------------
+• MIT License
+
+
+------------------------------------------------------------
+FILE DESCRIPTION
+------------------------------------------------------------
+File name: synthetic_evaluation_data.csv
+
+The file contains all synthetic features used in development of the
+clustering pipeline.
+
+
